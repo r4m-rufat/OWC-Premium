@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/navigation_white_dark"
+    tools:context=".DrawerLayoutItems.Backgrounds">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_for_Background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimaryDarkMode_dark">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backArrowForBackground"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/txt_backgrounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/backArrowForBackground"
+                android:text="@string/backgrounds"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_for_Background"
+        android:background="?attr/bottom_line_dark"/>
+
+    <ScrollView
+        android:layout_below="@id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_animated_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#3566BD"
+                android:text="@string/animated_background"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView_Animated"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/txt_animated_background"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/image1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/animated_partly_cloudy" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/image2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/image1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/animated_mist" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/image3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/image2"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/animated_thunder" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/image4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/image3"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/animated_rain" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/image5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/image4"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/animated_snowy" />
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/select_animated_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/scrollView_Animated"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ripple_effect"
+                android:text="Selected"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/txt_picture_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_animated_button"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="#3566BD"
+                android:text="@string/picture_background"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView_Picture"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/txt_picture_background"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/picture1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/clean_sky" />
+
+                    <ImageView
+                        android:id="@+id/picture2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/picture1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/sunny_and_cloudy" />
+
+                    <ImageView
+                        android:id="@+id/picture3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/picture2"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cloudly" />
+
+                    <ImageView
+                        android:id="@+id/picture4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/picture3"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rainy" />
+
+                    <ImageView
+                        android:id="@+id/picture5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/picture4"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/thunderstorm" />
+
+                    <ImageView
+                        android:id="@+id/picture6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/picture5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/snowy" />
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/select_picture_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/scrollView_Picture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ripple_effect"
+                android:text="Select"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/txt_color_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_picture_button"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="#3566BD"
+                android:text="@string/color_background"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/txt_color_background"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/gradient_blue_background_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_blue_background" />
+
+                <ImageView
+                    android:id="@+id/gradient_red_background_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_red_background" />
+
+                <ImageView
+                    android:id="@+id/gradient_purple_background_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_purple_background" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/select_blue_button"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/scrollView_Picture"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:text="Select"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/select_red_button"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/scrollView_Picture"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:text="Select"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/select_purple_button"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/scrollView_Picture"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:text="Select"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

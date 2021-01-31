@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_background_2"
+    tools:context=".IntroScreen.IntroActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skipLayout"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Skip"
+            android:layout_marginRight="5dp"
+            android:id="@+id/txt_skip"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/txt_skip"
+            android:src="@drawable/ic_fill_arrow_right"/>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/onBoardingViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabLayout"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:drawableRight="@drawable/ic_forward_arrow"
+        android:id="@+id/nextButton"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:background="@drawable/next_button_background"/>
+
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Get Started"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:background="@drawable/get_started_background"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        app:tabBackground="@drawable/indicator_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:tabIndicator="@null"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="20dp">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+</RelativeLayout>
